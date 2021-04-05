@@ -1,0 +1,11 @@
+- To download satellite data (preferentially L2) based on time, lat and lon use the python routine from Nils "getOC.py" (/Users/laaq/Documents/Python_code/getOC-master) (https://github.com/OceanOptics/getOC)
+
+- To download bulk L3 global satellite data sets, is better to do the following steps:
+	- Go to https://oceandata.sci.gsfc.nasa.gov/api/file_search and generate a list of 	files. Save that list in a .txt file
+	- NEW AS OF JUNE 2020 with the new NASA data download regulations: feed the list 	file to obdaac_download.py in /Users/laaq/Documents/Python_code/obdaac_download. I 	had to get help in the ocean color forum 
+	(https://oceancolor.gsfc.nasa.gov/forum/oceancolor/topic_show.pl?tid=12387).
+	An example of 	how to run the python file: 
+	python obdaac_download.py --filelist PAR_files_names_2012_2020_bin.txt 
+
+	- ODL EASY wget version (NO LONGER VALID DUE TO CHANGES IN NASA DOWNLOAD LOGIN 		REQUIREMENTS): Download the data by feeding the the .txt file to wget. On the mac 	terminal do: 
+	< wget -i .text > (this should start the download automatically in the current 		directory  
